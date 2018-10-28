@@ -2,7 +2,7 @@ import sys
 
 
 def solve(io):
-    
+    pass
 
 
 # +---------------------+
@@ -71,8 +71,8 @@ class IO:
 	def println(self, s):
 		self.print(s)
 		self.print('\n')
-	
-	def println_array(self, arr, sep = ' '):
+
+	def println_array(self, arr, sep=' '):
 		self.println(sep.join(str(x) for x in arr))
 
 	def flush_output(self):
