@@ -1,7 +1,12 @@
-# Ignore the bin folder
-bin/
+# Ignore workspace configuration files.
 .vscode/*
 
-# Ignore everything in the src folder except the #examples, #lib, and #templates
+# Ignore everything in the io folder except in.txt, out.txt, and err.txt.
+io/*
+!io/in.txt
+!io/out.txt
+!io/err.txt
+
+# Ignore everything in the src folder except the #examples, #lib, and #templates.
 src/*
 !src/\#*/
