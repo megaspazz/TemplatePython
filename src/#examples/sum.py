@@ -2,10 +2,10 @@ import sys
 
 
 def solve(io):
-    A = io.read_int()
-    B = io.read_int()
+	A = io.read_int()
+	B = io.read_int()
 
-    io.println(A + B)
+	io.println(A + B)
 
 
 # +---------------------+
@@ -66,13 +66,14 @@ class IO:
 			self.read_to_buffer()
 		if self.pos > 0:
 			raise ValueError("Cannot call read_line in the middle of a line.")
+		self.pos = len(self.buf)
 		return self.raw
 
-	def print(self, s):
-		self.out_stream.write(str(s))
+	def print(self, *args):
+		self.out_stream.write(' '.join([str(x) for x in args]))
 
-	def println(self, s):
-		self.print(s)
+	def println(self, *args):
+		self.print(*args)
 		self.print('\n')
 
 	def println_array(self, arr, sep=' '):
